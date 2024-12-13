@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-container {
+      background-color: white;
+      width: 100vw; /* Full width of the viewport */
+      height: 100vh; /* Full height of the viewport */
+      display: flex;
+      flex-direction: column; /* Stack header and the rest */
+      justify-content: space-between;
+      padding: 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header inside the contact-container */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .logo h1 {
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #7c3aed, #ff68d4);
+      color: white;
+    }
+
+    nav ul li a.active {
+      background: linear-gradient(90deg, #7c3aed, #ff68d4);
+      color: white;
+    }
+
+    /* Main content area */
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+    }
+
+    .form-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center form vertically */
+    }
+
+    .form-section h2 {
+      color: #2563eb;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .form-section p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #2563eb;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #2563eb;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #174ab9;
+    }
+
+    .info-section {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center info vertically */
+      align-items: flex-start;
+    }
+
+    .info-section img {
+      width: 100%;
+      max-width: 400px; /* Ensures image doesn't exceed this width */
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .contact-details {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .contact-details p {
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      position: fixed; /* Fixed position on the screen */
+      right: 20px;
+      bottom: 20px;
+    }
+
+    .social-links a {
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      padding: 15px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: #174ab9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <!-- Header section inside the contact-container -->
+    <header>
+      <div class="logo">
+          <img src="Brainy.jpg" alt="Brainy Buddy Logo">
+          <h1>BRAINY BUDDY</h1>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#" class="active">Connect</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <!-- Main content area -->
+    <div class="main-content">
+      <div class="form-section">
+        <h2>Get in touch</h2>
+        <p>We are here for you! How can we help?</p>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+
+      <div class="info-section">
+        <img src="Main.jpg.png" alt="Contact Icons">
+        <div class="contact-details">
+          <p><strong><i class="fa-solid fa-phone" style="color: #174ab9;"></i></strong> 545 Mavis Island, IL 99191</p>
+          <p><strong><i class="fa-solid fa-location-dot" style="color: #174ab9;"></i></strong> +2034 4040 3030</p>
+          <p><strong><i class="fa-regular fa-envelope" style="color: #174ab9;"></i></strong> hello@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-links">
+    <a href="#"><i class="fa-brands fa-twitter" style="color:white"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram" style="color:white"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin" style="color:white"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook" style="color:white"></i></a>
+  </div>
+
+</body>
+</html>
