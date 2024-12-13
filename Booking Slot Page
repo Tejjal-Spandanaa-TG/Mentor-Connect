@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Slot Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #488ee0;
+            margin-bottom: 20px;
+        }
+
+        .calendar, .slots {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .calendar-header {
+            background-color: #488ee0;
+            color: white;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .calendar-day {
+            background-color: #e7effa;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            color: #488ee0;
+            transition: background-color 0.3s;
+        }
+
+        .calendar-day:hover {
+            background-color: #488ee0;
+            color: white;
+        }
+
+        .slots-header {
+            background-color: #488ee0;
+            color: white;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .slot {
+            display: inline-block;
+            background-color: #e7effa;
+            color: #488ee0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slot:hover {
+            background-color: #488ee0;
+            color: white;
+        }
+
+        button {
+            background-color: #488ee0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #356bb5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Booking Slot Page</h1>
+
+    <!-- Calendar Section -->
+    <div class="calendar">
+        <div class="calendar-header">Select a Date</div>
+        <div class="calendar-grid">
+            <div class="calendar-day">Mon</div>
+            <div class="calendar-day">Tue</div>
+            <div class="calendar-day">Wed</div>
+            <div class="calendar-day">Thu</div>
+            <div class="calendar-day">Fri</div>
+            <div class="calendar-day">Sat</div>
+            <div class="calendar-day">Sun</div>
+
+            <!-- Week 1 -->
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+
+            <!-- Week 2 -->
+            <div class="calendar-day">8</div>
+            <div class="calendar-day">9</div>
+            <div class="calendar-day">10</div>
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day">13</div>
+            <div class="calendar-day">14</div>
+
+            <!-- Week 3 -->
+            <div class="calendar-day">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day">18</div>
+            <div class="calendar-day">19</div>
+            <div class="calendar-day">20</div>
+            <div class="calendar-day">21</div>
+
+            <!-- Week 4 -->
+            <div class="calendar-day">22</div>
+            <div class="calendar-day">23</div>
+            <div class="calendar-day">24</div>
+            <div class="calendar-day">25</div>
+            <div class="calendar-day">26</div>
+            <div class="calendar-day">27</div>
+            <div class="calendar-day">28</div>
+        </div>
+    </div>
+
+    <!-- Time Slot Section -->
+    <div class="slots">
+        <div class="slots-header">Available Time Slots</div>
+        <div class="slot">9:00 AM - 10:00 AM</div>
+        <div class="slot">10:00 AM - 11:00 AM</div>
+        <div class="slot">11:00 AM - 12:00 PM</div>
+        <div class="slot">12:00 PM - 1:00 PM</div>
+        <div class="slot">2:00 PM - 3:00 PM</div>
+        <div class="slot">3:00 PM - 4:00 PM</div>
+    </div>
+
+    <!-- Submit Button -->
+    <button>Confirm Booking</button>
+</div>
+
+</body>
+</html>
